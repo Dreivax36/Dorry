@@ -40,6 +40,9 @@ dependencies:
   # inversion of control
   get_it:
   injectable:
+  
+  #svg
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:
@@ -50,7 +53,7 @@ dev_dependencies:
   auto_route_generator: 
   build_runner:
   injectable_generator:
-  flutter_native_splash: ^0.2.8
+  flutter_native_splash: 
 
 flutter_native_splash:
   color: "#ffffff"
@@ -73,6 +76,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/images/
+     - assets/svg/
  
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -98,5 +102,12 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
+    - family:  CustomIcons
+      fonts:
+        - asset: fonts/CustomIcons.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

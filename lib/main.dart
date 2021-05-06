@@ -14,6 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      theme: ThemeData(
+        primaryColor: Color(0xff46b7bf),
+        accentColor: Color(0xffffae48),
+        iconTheme: IconThemeData(color: Color(0xffc4c4c4)),
+        fontFamily: 'Poppins',
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+        ),
+      ),
       initialRoute: Routes.getStartedView,
       onGenerateRoute: Router().onGenerateRoute,
       navigatorKey: locator<NavigationService>().navigatorKey,

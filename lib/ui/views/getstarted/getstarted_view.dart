@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:stacked/stacked.dart';
 import 'get_started_info.dart';
 import 'getstarted_viewmodel.dart';
@@ -61,17 +62,17 @@ class _GetStartedViewState extends State<GetStartedView> {
             Positioned(
               top: 0,
               right: 0,
-              child: Image.asset(
-                'assets/images/TopRight.png',
-                scale: 1,
+              child: SvgPicture.asset(
+                'assets/svg/upper-right.svg',
+                width: screenWidth * 0.75,
               ),
             ),
             Positioned(
               bottom: 0,
               left: 0,
-              child: Image.asset(
-                'assets/images/BotLeft.png',
-                scale: 1,
+              child: SvgPicture.asset(
+                'assets/svg/lower-left.svg',
+                width: screenWidth * 0.45,
               ),
             ),
             Padding(
@@ -125,7 +126,6 @@ class _GetStartedViewState extends State<GetStartedView> {
                         'GET STARTED',
                         style: TextStyle(
                           fontSize: 15,
-                          fontFamily: 'Roboto',
                           fontWeight: FontWeight.w500,
                           color: Colors.white,
                         ),

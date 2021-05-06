@@ -1,29 +1,31 @@
 import 'package:dorry_v1/ui/views/getstarted/get_started_info.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SlideItem extends StatelessWidget {
   final int index;
+
   SlideItem(this.index);
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Text(
           slideList[index].title,
-          style: const TextStyle(
-            fontFamily: 'Roboto',
+          style: TextStyle(
             fontWeight: FontWeight.w700,
-            fontSize: 27.0,
+            fontSize: AdaptiveTextSize().getadaptiveTextSize(context, 20),
             color: Colors.black,
           ),
           textAlign: TextAlign.center,
           maxLines: 2,
         ),
         SizedBox(
-          height: 30,
+          height: screenHeight * 0.03,
         ),
         Container(
           width: 200,
@@ -36,16 +38,15 @@ class SlideItem extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 10,
+          height: screenHeight * 0.01,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Text(
             slideList[index].description,
-            style: const TextStyle(
-              fontFamily: 'Roboto',
+            style: TextStyle(
               fontWeight: FontWeight.w300,
-              fontSize: 16.0,
+              fontSize: AdaptiveTextSize().getadaptiveTextSize(context, 16),
               color: Colors.black,
             ),
             textAlign: TextAlign.center,
@@ -54,5 +55,14 @@ class SlideItem extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class AdaptiveTextSize {
+  const AdaptiveTextSize();
+
+  getadaptiveTextSize(BuildContext context, dynamic value) {
+    // 720 is medium screen height
+    return (value / 720) * MediaQuery.of(context).size.height;
   }
 }

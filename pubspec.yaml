@@ -106,7 +106,8 @@ flutter:
     - family: Poppins
       fonts:
         - asset: fonts/Poppins-Regular.ttf
-    - family:  CustomIcons
+
+    - family: CustomIcons
       fonts:
         - asset: fonts/CustomIcons.ttf
   # For details regarding fonts from package dependencies,

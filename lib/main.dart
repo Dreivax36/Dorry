@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           color: Colors.white,
         ),
+        scaffoldBackgroundColor: Colors.white,
       ),
       initialRoute: Routes.getStartedView,
       onGenerateRoute: Router().onGenerateRoute,

@@ -7,23 +7,28 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:auto_route/auto_route.dart';
+
 import 'package:flutter/material.dart';
 
 import '../ui/views/getstarted/getstarted_view.dart';
 import '../ui/views/home/home_view.dart';
 import '../ui/views/login/login_view.dart';
 import '../ui/views/signup/signup_view.dart';
+import '../ui/views/laundry/laundry_view.dart';
 
 class Routes {
   static const String getStartedView = '/';
   static const String signUpView = '/sign-up-view';
   static const String loginView = '/login-view';
   static const String homeView = '/home-view';
+  static const String laundryView = '/laundry-view';
+
   static const all = <String>{
     getStartedView,
     signUpView,
     loginView,
     homeView,
+    laundryView,
   };
 }
 
@@ -35,6 +40,7 @@ class Router extends RouterBase {
     RouteDef(Routes.signUpView, page: SignUpView),
     RouteDef(Routes.loginView, page: LoginView),
     RouteDef(Routes.homeView, page: HomeView),
+    RouteDef(Routes.laundryView, page: LaundryView),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -63,5 +69,11 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    LaundryView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const LaundryView(),
+        settings: data,
+      );
+    }
   };
 }

@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xffffae48),
         iconTheme: IconThemeData(color: Color(0xffc4c4c4)),
         fontFamily: 'Poppins',
-        appBarTheme: AppBarTheme(
-          color: Colors.white,
-        ),
+        appBarTheme: AppBarTheme(color: Colors.white, elevation: 0),
         scaffoldBackgroundColor: Colors.white,
       ),
       initialRoute: Routes.getStartedView,

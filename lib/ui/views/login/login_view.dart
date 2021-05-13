@@ -146,7 +146,7 @@ class _LoginViewState extends State<LoginView> {
                                   borderRadius: BorderRadius.circular(50.0)),
                               child: FlatButton(
                                 onPressed: () {
-                                  model.nagivateToHome();
+                                  model.navigateToHome();
                                 },
                                 child: Icon(
                                   Icons.arrow_forward_rounded,
@@ -167,7 +167,7 @@ class _LoginViewState extends State<LoginView> {
                               minWidth: 50,
                               padding: EdgeInsets.all(0),
                               onPressed: () {
-                                model.nagivateToSignUp();
+                                model.navigateToSignUp();
                               },
                               child: Text(
                                 "Sign Up",

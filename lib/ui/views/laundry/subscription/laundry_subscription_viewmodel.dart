@@ -3,7 +3,7 @@ import 'package:dorry_v1/app/router.gr.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-class LaundryViewModel extends BaseViewModel {
+class LaundrySubscriptionViewModel extends BaseViewModel {
   final NavigationService _navigationService = locator<NavigationService>();
 
   Future navigateToLaundrySubscription() async {

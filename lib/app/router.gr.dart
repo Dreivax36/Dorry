@@ -15,6 +15,7 @@ import '../ui/views/home/home_view.dart';
 import '../ui/views/login/login_view.dart';
 import '../ui/views/signup/signup_view.dart';
 import '../ui/views/laundry/laundry_view.dart';
+import '../ui/views/laundry/subscription/laundry_subscription_view.dart';
 
 class Routes {
   static const String getStartedView = '/';
@@ -22,6 +23,7 @@ class Routes {
   static const String loginView = '/login-view';
   static const String homeView = '/home-view';
   static const String laundryView = '/laundry-view';
+  static const String laundrySubscriptionView = '/laundry-subscription-view';
 
   static const all = <String>{
     getStartedView,
@@ -29,6 +31,7 @@ class Routes {
     loginView,
     homeView,
     laundryView,
+    laundrySubscriptionView,
   };
 }
 
@@ -41,6 +44,7 @@ class Router extends RouterBase {
     RouteDef(Routes.loginView, page: LoginView),
     RouteDef(Routes.homeView, page: HomeView),
     RouteDef(Routes.laundryView, page: LaundryView),
+    RouteDef(Routes.laundrySubscriptionView, page: LaundrySubscriptionView),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -72,6 +76,12 @@ class Router extends RouterBase {
     LaundryView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const LaundryView(),
+        settings: data,
+      );
+    },
+    LaundrySubscriptionView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const LaundrySubscriptionView(),
         settings: data,
       );
     }

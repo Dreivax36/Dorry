@@ -42,19 +42,19 @@ class _LaundryViewState extends State<LaundryView> {
             children: <Widget>[
               LaundryHeader(screenHeight, screenWidth),
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(25.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Choose your plan",
                       style: TextStyle(
-                        fontSize: screenHeight * 0.026,
+                        fontSize: screenHeight * 0.024,
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 30),
+                          horizontal: 15, vertical: 30),
                       child: Wrap(
                         spacing: screenWidth * 0.075,
                         runSpacing: screenWidth * 0.075,
@@ -124,7 +124,7 @@ class _LaundryViewState extends State<LaundryView> {
                         ),
                       ),
                       onPressed: () {
-                        model.navigateToLaundry();
+                        model.navigateToLaundrySubscription();
                       },
                     ),
                   ],

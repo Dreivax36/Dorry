@@ -3,6 +3,7 @@ import 'package:dorry_v1/ui/views/getstarted/getstarted_view.dart';
 import 'package:dorry_v1/ui/views/home/home_view.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dorry_v1/ui/views/laundry/laundry_view.dart';
+import 'package:dorry_v1/ui/views/laundry/subscription/laundry_subscription_view.dart';
 import 'package:dorry_v1/ui/views/login/login_view.dart';
 import 'package:dorry_v1/ui/views/signup/signup_view.dart';
 
@@ -13,6 +14,7 @@ import 'package:dorry_v1/ui/views/signup/signup_view.dart';
     MaterialRoute(page: LoginView),
     MaterialRoute(page: HomeView),
     MaterialRoute(page: LaundryView),
+    MaterialRoute(page: LaundrySubscriptionView),
   ],
 )
 class $Router {}

@@ -6,7 +6,7 @@ import 'package:stacked_services/stacked_services.dart';
 class LaundrySubscriptionViewModel extends BaseViewModel {
   final NavigationService _navigationService = locator<NavigationService>();
 
-  Future navigateToLaundrySubscription() async {
-    await _navigationService.navigateTo(Routes.laundrySubscriptionView);
+  Future navigateToHome() async {
+    await _navigationService.navigateTo(Routes.homeView);
   }
 }

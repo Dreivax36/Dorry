@@ -11,16 +11,15 @@ class _Step2State extends State<Step2> {
   final _dateController = TextEditingController();
   DateTime selectedDate;
 
-  CalendarController _controller; //controller creation
+  CalendarController _controller;
   @override
   void initState() {
     super.initState();
-    _controller = CalendarController(); //initializing it
+    _controller = CalendarController();
   }
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is removed
     _dateController.dispose();
     super.dispose();
   }

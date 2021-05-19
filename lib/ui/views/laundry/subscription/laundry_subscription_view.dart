@@ -1,9 +1,11 @@
-import 'dart:ffi';
+import 'dart:ui';
 
 import 'package:dorry_v1/ui/misc/laundry_header.dart';
+import 'package:dorry_v1/ui/views/home/home_view.dart';
 import 'package:dorry_v1/ui/views/laundry/subscription/steps/step1.dart';
 import 'package:dorry_v1/ui/views/laundry/subscription/steps/step2.dart';
 import 'package:dorry_v1/ui/views/laundry/subscription/steps/step3.dart';
+import 'package:dorry_v1/ui/views/laundry/subscription/steps/step4.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -172,7 +174,7 @@ class _StepContentState extends State<StepContent> {
       case 3:
         buttontext = 'SUBSCRIBE';
         return Container(
-          child: Text('step 4'),
+          child: Step4(),
         );
       default:
     }
@@ -206,6 +208,37 @@ class _StepContentState extends State<StepContent> {
           setState(() {
             activeStep++;
           });
+        }
+        if (activeStep == dotCount - 1) {
+          return showDialog(
+            context: context,
+            builder: (ctx) => AlertDialog(
+              title: Text('CONFIRM YOUR SUBSCRIPTION',
+                  style: TextStyle(fontSize: 13.5),
+                  textAlign: TextAlign.center),
+              content: Text(
+                  'You are about to start your subscription, are you sure you want to do this?',
+                  style: TextStyle(fontSize: 13.5),
+                  textAlign: TextAlign.center),
+              actions: <Widget>[
+                FlatButton(
+                  onPressed: () {
+                    Navigator.of(ctx).pop();
+                  },
+                  child: Text("No, thanks"),
+                ),
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeView()),
+                    );
+                  },
+                  child: Text("Yes, I confirm"),
+                ),
+              ],
+            ),
+          );
         }
       },
     );

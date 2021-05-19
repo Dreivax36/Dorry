@@ -12,7 +12,7 @@ class _Step1State extends State<Step1> {
   int selectedIndex;
   int selectedIndex2;
 
-  int val = 1;
+  int val;
 
   void initState() {
     super.initState();
@@ -120,14 +120,20 @@ class _Step1State extends State<Step1> {
                 ),
               ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  customButton(title[0], 0),
-                  customButton(title[1], 1),
-                  customButton(title[2], 2),
-                ],
+              Container(
+                height: 35,
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.blueGrey[200]),
+                    borderRadius: BorderRadius.circular(50)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    customButton(title[0], 0),
+                    customButton(title[1], 1),
+                    customButton(title[2], 2),
+                  ],
+                ),
               )
             ],
           ),
@@ -145,15 +151,22 @@ class _Step1State extends State<Step1> {
                 ),
               ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  customButton2(title[0], 0),
-                  customButton2(title[1], 1),
-                  customButton2(title[2], 2),
-                ],
-              )
+              Container(
+                height: 35,
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.blueGrey[200]),
+                    borderRadius: BorderRadius.circular(50)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    customButton2(title[0], 0),
+                    customButton2(title[1], 1),
+                    customButton2(title[2], 2),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
             ],
           ),
         ],
@@ -179,7 +192,10 @@ class _Step1State extends State<Step1> {
           : Colors.white,
       child: Text(
         title,
-        style: TextStyle(fontSize: screenHeight * 0.014),
+        style: TextStyle(
+          fontSize: screenHeight * 0.014,
+          color: selectedIndex == index ? Colors.white : Colors.black,
+        ),
       ),
     );
   }
@@ -202,7 +218,10 @@ class _Step1State extends State<Step1> {
           : Colors.white,
       child: Text(
         title,
-        style: TextStyle(fontSize: screenHeight * 0.014),
+        style: TextStyle(
+          fontSize: screenHeight * 0.014,
+          color: selectedIndex2 == index ? Colors.white : Colors.black,
+        ),
       ),
     );
   }

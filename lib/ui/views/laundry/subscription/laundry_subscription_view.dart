@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:dorry_v1/ui/misc/laundry_header.dart';
 import 'package:dorry_v1/ui/views/laundry/subscription/steps/step1.dart';
+import 'package:dorry_v1/ui/views/laundry/subscription/steps/step2.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -160,7 +161,7 @@ class _StepContentState extends State<StepContent> {
       case 1:
         buttontext = 'NEXT';
         return Container(
-          child: Text('step 2'),
+          child: Step2(),
         );
       case 2:
         buttontext = 'NEXT';

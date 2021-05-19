@@ -54,6 +54,7 @@ dependencies:
   #calendar
   table_calendar: ^2.1.0  
   
+  custom_switch:
 
 dev_dependencies:
   flutter_test:

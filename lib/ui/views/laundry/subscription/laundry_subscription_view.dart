@@ -209,7 +209,7 @@ class _StepContentState extends State<StepContent> {
             activeStep++;
           });
         }
-        if (activeStep == dotCount - 1) {
+        if (buttontext == 'SUBSCRIBE') {
           return showDialog(
             context: context,
             builder: (ctx) => AlertDialog(
